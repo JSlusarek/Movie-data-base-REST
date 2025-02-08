@@ -22,3 +22,57 @@ Accept: application/json
 
 DELETE http://127.0.0.1:8000/movies/5
 Accept: application/json
+
+
+### Zadanie Jan Ślusarek 
+### Dodanie nowego filmu
+POST http://127.0.0.1:8000/movies
+Content-Type: application/json
+
+{
+  "title": "Inception",
+  "year": 2010,
+  "director": "Christopher Nolan",
+  "description": "A mind-bending thriller"
+}
+
+### Pobranie listy wszystkich filmów
+GET http://127.0.0.1:8000/movies
+Accept: application/json
+
+### Pobranie konkretnego filmu (zmień ID na istniejący)
+GET http://127.0.0.1:8000/movies/1
+Accept: application/json
+
+### Usunięcie filmu (zmień ID na istniejący)
+DELETE http://127.0.0.1:8000/movies/2
+Accept: application/json
+
+### Dodanie nowego aktora
+POST http://127.0.0.1:8000/actors
+Content-Type: application/json
+
+{
+  "name": "Leonardo",
+  "surname": "DiCaprio"
+}
+
+### Pobranie wszystkich aktorów
+GET http://127.0.0.1:8000/actors
+Accept: application/json
+
+### Pobranie konkretnego aktora (zmień ID na istniejący)
+GET http://127.0.0.1:8000/actors/1
+Accept: application/json
+
+### Przypisanie aktora do filmu
+POST http://127.0.0.1:8000/movies/7/actors
+Content-Type: application/json
+
+{
+  "actor_id": 19
+}
+
+### Usunięcie aktora (zmień ID na istniejący)
+DELETE http://127.0.0.1:8000/actors/19
+Accept: application/json
